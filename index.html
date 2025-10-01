@@ -1,10 +1,284 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Hello World</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Audio demonstrations for the paper Generative Adversarial Post-Training Mitigates Reward Hacking in Live Human-AI Music Interaction." />
+  <title>
+    Generative Adversarial Post-Training Mitigates Reward Hacking in Live
+    Human-AI Music Interaction
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+  <link rel="stylesheet" href="./static/css/bulma.min.css" />
+  <link rel="stylesheet" href="./static/css/index.css" />
 </head>
+
 <body>
-  hello world
+  <section class="hero publication-header">
+    <div class="hero-body">
+      <div class="container is-expanded has-text-centered">
+        <h1 class="title is-1 publication-title">
+          Generative Adversarial Post-Training Mitigates Reward Hacking in
+          Live Human-AI Music Interaction
+        </h1>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">Anonymous authors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="container is-expanded">
+      <div class="content is-medium">
+        <p>
+          We evaluate Generative Adversarial Post-Training (GAPT) for real-time melody-to-chord accompaniment.
+          The examples below shows piano-roll visualizations with four systems: the ground-truth
+          data, GAPT (ours), GAPT without adversarial post-training,
+          and the ReaLchords baseline.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section examples">
+    <div class="container is-expanded">
+      <h2 class="title is-3">Examples of Hooktheory test set</h2>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Hooktheory Example 1</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/hooktheory_idx103_compare32.png" alt="Hooktheory example 103 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx103_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx103_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx103_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx103_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Hooktheory Example 2</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/hooktheory_idx106_compare32.png" alt="Hooktheory example 106 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx106_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx106_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx106_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx106_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Hooktheory Example 3</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/hooktheory_idx109_compare32.png" alt="Hooktheory example 109 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx109_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx109_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx109_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx109_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Hooktheory Example 4</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/hooktheory_idx113_compare32.png" alt="Hooktheory example 113 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx113_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx113_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx113_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/hooktheory_idx113_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section examples">
+    <div class="container is-expanded">
+      <h2 class="title is-3">Examples of Nottingham test set</h2>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Nottingham Example 1</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/nottingham_idx4_compare32.png" alt="Nottingham example 4 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx4_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx4_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx4_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx4_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Nottingham Example 11</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/nottingham_idx11_compare32.png" alt="Nottingham example 11 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx11_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx11_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx11_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx11_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Nottingham Example 2</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/nottingham_idx15_compare32.png" alt="Nottingham example 15 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx15_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx15_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx15_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx15_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3 class="title is-4 example-title">Nottingham Example 3</h3>
+        <figure class="image example-image">
+          <img src="./static/assets/nottingham_idx34_compare32.png" alt="Nottingham example 34 comparison" />
+        </figure>
+        <div class="columns is-variable is-3 is-multiline audio-row">
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">Ground truth</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx34_ground_truth.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT (ours)</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx34_gapt_ours.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">GAPT w/o adversarial post-training</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx34_gapt_w_o_adv.wav"></audio>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop audio-sample">
+            <p class="audio-label">RealChords baseline</p>
+            <audio controls preload="auto" src="./static/assets/nottingham_idx34_realchords.wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        This page adapts the
+        <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project template</a>, which is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike
+          4.0 International
+          License</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var audios = document.querySelectorAll("audio[preload]");
+      audios.forEach(function (audio) {
+        try {
+          audio.load();
+        } catch (err) {
+          console.warn("Audio preload failed", err);
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
